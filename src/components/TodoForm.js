@@ -11,6 +11,7 @@ const TodoForm = ({ isValid, onSubmit }) => (
   >
     <Control.text
       model=".description"
+      placeholder="What do you want to do?"
       validators={{
         required: (val) => val && val.length,
       }}
@@ -25,7 +26,7 @@ const TodoForm = ({ isValid, onSubmit }) => (
 );
 
 TodoForm.propTypes = {
-  isValid: PropTypes.func,
+  isValid: PropTypes.bool,
   onSubmit: PropTypes.func,
 };
 TodoForm.defaultProps = {
