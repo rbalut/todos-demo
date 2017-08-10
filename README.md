@@ -4,6 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is a demo of the Todo App.
 
+The compiled version of this app is available [here](http://todos.balut.biz).
+
+
 Finished features:
  - Add tasks
  - Delete tasks
