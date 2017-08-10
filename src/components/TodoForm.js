@@ -1,16 +1,16 @@
 import React, { PropTypes } from 'react';
 import { Control, Form } from 'react-redux-form';
 import css from '../helpers/css';
-import './TodoForm.css';
 
 const TodoForm = ({ isValid, onSubmit }) => (
   <Form
-    className={css('form')}
+    className={css('form').mix('form-inline')}
     onSubmit={onSubmit}
     model="todoForm"
   >
     <Control.text
       model=".text"
+      className="form-control"
       placeholder="What do you want to do?"
       validators={{
         required: (val) => val && val.length,
@@ -18,6 +18,7 @@ const TodoForm = ({ isValid, onSubmit }) => (
     />
     <button
       type="submit"
+      className={css('submit-btn').mix('btn btn-primary')}
       disabled={!isValid}
     >
       Add Todo

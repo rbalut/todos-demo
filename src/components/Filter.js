@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from '../helpers/css';
+import { Button } from 'react-bootstrap';
 
-const Filter = ({ children, onClick, value }) => {
+const Filter = ({ children, isActive, onClick, value }) => {
   const handleClick = (event) => {
     event.preventDefault();
     onClick(value);
   };
   return (
-    <button
-      className={css('filter')}
+    <Button
+      bsStyle="link"
+      disabled={isActive}
       onClick={handleClick}
     >
       {children}
-    </button>
+    </Button>
   );
 };
 
 Filter.propTypes = {
+  isActive: PropTypes.bool.isRequired,
   value: PropTypes.string,
   children: PropTypes.any.isRequired,
   onClick: PropTypes.func.isRequired,

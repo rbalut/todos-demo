@@ -1,7 +1,7 @@
 import { SET_FILTER } from '../actions/appActions';
 
 const initialState = {
-  filter: null,
+  filter: 'SHOW_ALL',
 };
 
 const app = (state = initialState, action) => {

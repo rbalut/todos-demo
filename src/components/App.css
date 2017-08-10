@@ -1,3 +1,21 @@
-.App {
-  text-align: center;
+.todos-demo__form {
+  margin-bottom: 20px;
+}
+
+.todos-demo__form .form-control {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.todos-demo__filters [disabled] {
+  text-decoration: underline;
+}
+
+.todos-demo__list-item.is-completed .todos-demo__list-item-label {
+  text-decoration: line-through;
+}
+
+.todos-demo__list-item .glyphicon-remove {
+  margin-top: 3px;
+  cursor: pointer;
 }

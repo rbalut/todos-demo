@@ -1,4 +1,4 @@
-import { TODO_ADD } from '../actions/listActions';
+import { TODO_ADD, TODO_REMOVE, TODO_TOGGLE } from '../actions/listActions';
 
 const initialState = [];
 
@@ -13,9 +13,11 @@ const list = (state = initialState, action) => {
           completed: false,
         },
       ];
-    case 'TOGGLE_TODO':
+    case TODO_REMOVE:
+      return state.filter((todo) => todo.id !== action.payload);
+    case TODO_TOGGLE:
       return state.map((todo) => (
-        (todo.id === action.id) ? { ...todo, completed: !todo.completed } : todo
+        (todo.id === action.payload) ? { ...todo, completed: !todo.completed } : todo
       ));
     default:
       return state;
