@@ -1,17 +1,15 @@
-const initialState = {
-  items: [],
-  active: null,
-};
+import { TODO_ADD } from '../actions/listActions';
 
+const initialState = [];
 
 const list = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case TODO_ADD:
       return [
         ...state,
         {
-          id: action.id,
-          text: action.text,
+          id: action.payload.id,
+          text: action.payload.text,
           completed: false,
         },
       ];

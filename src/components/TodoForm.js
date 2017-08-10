@@ -7,10 +7,10 @@ const TodoForm = ({ isValid, onSubmit }) => (
   <Form
     className={css('form')}
     onSubmit={onSubmit}
-    model="todo"
+    model="todoForm"
   >
     <Control.text
-      model=".description"
+      model=".text"
       placeholder="What do you want to do?"
       validators={{
         required: (val) => val && val.length,

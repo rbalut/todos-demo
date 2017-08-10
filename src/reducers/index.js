@@ -1,18 +1,10 @@
 import { combineReducers } from 'redux';
-import { createForms } from 'react-redux-form';
 import list from './list';
-
-const initialTodoForm = {
-  description: 'test',
-};
+import todoForm from './todoForm';
 
 const rootReducer = combineReducers({
   list,
-  ...createForms({
-    todo: initialTodoForm,
-  }),
-
+  todoForm,
 });
-
 
 export default rootReducer;
