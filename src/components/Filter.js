@@ -18,7 +18,7 @@ const Filter = ({ children, onClick, value }) => {
 };
 
 Filter.propTypes = {
-  value: PropTypes.bool,
+  value: PropTypes.string,
   children: PropTypes.any.isRequired,
   onClick: PropTypes.func.isRequired,
 };

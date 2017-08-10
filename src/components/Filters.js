@@ -4,9 +4,9 @@ import Filter from '../containers/Filter';
 
 const Filters = () => (
   <div className={css('filters')}>
-    <Filter value={null}>All</Filter>
-    <Filter value>Completed</Filter>
-    <Filter value={false}> Not Completed</Filter>
+    <Filter value="SHOW_ALL">All</Filter>
+    <Filter value="SHOW_ACTIVE">Active</Filter>
+    <Filter value="SHOW_COMPLETED">Completed</Filter>
   </div>
 );
 
