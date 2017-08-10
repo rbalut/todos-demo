@@ -6,7 +6,10 @@ const List = ({ items, onRemove, onToggle }) => (
   <ListGroup className={css('list')}>
     {items.map((item) => {
       const handleClick = () => onToggle(item.id);
-      const handleRemove = () => onRemove(item.id);
+      const handleRemove = (event) => {
+        event.stopPropagation();
+        onRemove(item.id);
+      };
       return (
         <div
           onClick={handleClick}
